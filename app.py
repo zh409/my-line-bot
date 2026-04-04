@@ -5,21 +5,26 @@ import os
 
 app = Flask(__name__)
 
-# 從環境變數讀取，部署到 Heroku 不會暴露密碼
+# 從 Render 環境變數讀取（不要寫死在程式裡）
 LINE_CHANNEL_ACCESS_TOKEN = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
 LINE_CHANNEL_SECRET = os.environ.get("LINE_CHANNEL_SECRET")
 
-line_bot_api = LineBotApi(DwYxJ9Vdir9I0r7OX98pDf10P/PaKeKz9KnhSQzzsjYzOs8D3DDAPkwYJ0RNHfK2b+QaB2MIHM/3NjLf7oxtCkOOkM/xv6Ti5YefId9Jhn4mczAMFjABHZhsZDlyIr2ojXmNAM+YmNgrFGcPRDp39AdB04t89/1O/w1cDnyilFU=)
-handler = WebhookHandler(5ea74ec08962674867db6de8e2fac936)
+line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
+handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
+# 👉 首頁（測試用，避免 404）
+@app.route("/")
+def home():
+    return "LINE Bot is running!"
+
+# 👉 LINE Webhook
 @app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers.get('X-Line-Signature')
     body = request.get_data(as_text=True)
 
     print("====收到請求====")
-    print("Body:", body)
-    print("Signature:", signature)
+    print(body)
 
     try:
         handler.handle(body, signature)
@@ -29,6 +34,7 @@ def callback():
 
     return 'OK'
 
+# 👉 訊息處理
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
@@ -81,7 +87,7 @@ def handle_message(event):
             TextSendMessage(text=f"你說的是: {msg}")
         )
 
+# 👉 Render 用（一定要這樣寫）
 if __name__ == "__main__":
-    # 讓 Heroku 自動抓 PORT
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
