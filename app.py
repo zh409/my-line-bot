@@ -348,16 +348,6 @@ def handle_message(event):
         "label": "立即報名",
         "uri": "https://ted-1111.github.io/taoyuan-trip/"
     }
-},
-{
-    "type": "button",
-    "style": "secondary",
-    "margin": "md",
-    "action": {
-        "type": "uri",
-        "label": "真人客服",
-        "uri": "https://line.me/R/ti/p/0928251217"
-    }
 }
                         ]
                     }
