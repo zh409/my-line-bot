@@ -35,7 +35,86 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
+    if msg == "價格方案":
 
+        line_bot_api.reply_message(
+        event.reply_token,
+        FlexSendMessage(
+            alt_text="價格方案",
+            contents={
+                "type": "bubble",
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+
+                        {
+                            "type": "text",
+                            "text": "旅遊價格方案",
+                            "weight": "bold",
+                            "size": "xl"
+                        },
+
+                        {
+                            "type": "separator",
+                            "margin": "md"
+                        },
+
+                        {
+                            "type": "text",
+                            "text": "平日價",
+                            "weight": "bold",
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "text",
+                            "text": "單人：$1,399"
+                        },
+                        {
+                            "type": "text",
+                            "text": "雙人：$1,259 /人"
+                        },
+
+                        {
+                            "type": "separator",
+                            "margin": "md"
+                        },
+
+                        {
+                            "type": "text",
+                            "text": "假日價",
+                            "weight": "bold",
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "text",
+                            "text": "單人：$1,499"
+                        },
+                        {
+                            "type": "text",
+                            "text": "雙人：$1,349 /人"
+                        },
+
+                        {
+                            "type": "separator",
+                            "margin": "md"
+                        },
+
+                        {
+                            "type": "text",
+                            "text": "企業包車",
+                            "weight": "bold",
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "text",
+                            "text": "$13,000（30人大巴）"
+                        }
+                    ]
+                }
+            }
+        )
+    )
     # 銀髮族旅遊行程
     if msg in ["桃園銀髮一日遊", "銀髮旅遊", "桃園一日遊"]:
 
@@ -386,7 +465,7 @@ def handle_message(event):
             QuickReplyButton(
                 action=URIAction(
                     label="真人客服",
-                    uri="https://line.me/R/ti/p/@你的LINEID"
+                    uri="https://line.me/ti/p/o5fv1ytPAe"
                 )
             )
         ]
