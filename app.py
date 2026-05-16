@@ -79,7 +79,7 @@ def handle_message(event):
                     "type": "bubble",
                     "hero": {
                         "type": "image",
-                        "url": "https://www.travel.tycg.gov.tw/content/images/attractions/43327/1024x768_attractions-image-lv5fxf4.jpg",
+                        "url": "https://travel.tycg.gov.tw/content/images/theme-tour/theme-w800-shihmen-12.jpg",
                         "size": "full",
                         "aspectRatio": "20:13",
                         "aspectMode": "cover"
@@ -116,7 +116,7 @@ def handle_message(event):
                     "type": "bubble",
                     "hero": {
                         "type": "image",
-                        "url": "https://www.travel.tycg.gov.tw/content/images/attractions/100305/1024x768_attractions-image-vx7yr6f.jpg",
+                        "url": "https://tse4.mm.bing.net/th/id/OIP.oM_xBZCkpeFBELRTH8nRUQHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
                         "size": "full",
                         "aspectRatio": "20:13",
                         "aspectMode": "cover"
@@ -153,7 +153,7 @@ def handle_message(event):
                     "type": "bubble",
                     "hero": {
                         "type": "image",
-                        "url": "https://www.travel.tycg.gov.tw/content/images/attractions/32749/1024x768_attractions-image-4d7rzm4.jpg",
+                        "url": "https://tse1.mm.bing.net/th/id/OIP.2Ih1zR4bYHAfZs7LxxLBcwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
                         "size": "full",
                         "aspectRatio": "20:13",
                         "aspectMode": "cover"
@@ -184,7 +184,76 @@ def handle_message(event):
                         ]
                     }
                 },
-
+                {
+                        "type": "bubble",
+                        "hero": {
+                            "type": "image",
+                            "url": "https://www.travel.tycg.gov.tw/content/images/attractions/73928/1024x768_attractions-image-wm9x7ra.jpg",
+                            "size": "full",
+                            "aspectRatio": "20:13",
+                            "aspectMode": "cover"
+                        },
+                        "body": {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "虎頭山公園",
+                                    "weight": "bold",
+                                    "size": "lg"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "桃園知名森林公園，空氣清新、綠意盎然，適合長輩慢步放鬆，感受自然芬多精。",
+                                    "wrap": True,
+                                    "size": "sm",
+                                    "margin": "md"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "15:00 - 16:45",
+                                    "color": "#888888",
+                                    "size": "sm"
+                                }
+                            ]
+                        }
+                    },
+                      {
+                        "type": "bubble",
+                                    "hero": {
+                                        "type": "image",
+                                        "url": "https://www.travel.tycg.gov.tw/content/images/attractions/86327/1024x768_attractions-image-h9l7v2m.jpg",
+                                        "size": "full",
+                                        "aspectRatio": "20:13",
+                                        "aspectMode": "cover"
+                                    },
+                                    "body": {
+                                        "type": "box",
+                                        "layout": "vertical",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "桃園觀光夜市",
+                                                "weight": "bold",
+                                                "size": "lg"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "享用在地特色晚餐與夜市小吃，體驗桃園熱鬧夜生活與台灣美食文化。",
+                                                "wrap": True,
+                                                "size": "sm",
+                                                "margin": "md"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "17:15 - 18:30",
+                                                "color": "#888888",
+                                                "size": "sm"
+                                            }
+                                        ]
+                                    }
+                                },
                 # 第五張：價格方案
                 {
                     "type": "bubble",
@@ -273,6 +342,7 @@ def handle_message(event):
                 }
             ]
         }
+        
 
         line_bot_api.reply_message(
             event.reply_token,
