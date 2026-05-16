@@ -356,7 +356,7 @@ def handle_message(event):
     "action": {
         "type": "uri",
         "label": "真人客服",
-        "uri": "https://line.me/R/ti/p/@0928251217"
+        "uri": "https://line.me/R/ti/p/0928251217"
     }
 }
                         ]
