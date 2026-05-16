@@ -188,7 +188,7 @@ def handle_message(event):
                         "type": "bubble",
                         "hero": {
                             "type": "image",
-                            "url": "https://www.travel.tycg.gov.tw/content/images/attractions/73928/1024x768_attractions-image-wm9x7ra.jpg",
+                            "url": "https://travel.tycg.gov.tw/content/images/attractions/60001/1024x768_attractions-image-upsrfkk9lusk0ztwzzslvq.jpg",
                             "size": "full",
                             "aspectRatio": "20:13",
                             "aspectMode": "cover"
@@ -223,7 +223,7 @@ def handle_message(event):
                         "type": "bubble",
                                     "hero": {
                                         "type": "image",
-                                        "url": "https://www.travel.tycg.gov.tw/content/images/attractions/86327/1024x768_attractions-image-h9l7v2m.jpg",
+                                        "url": "https://treatrip.com/wp-content/uploads/blog_taoyuan-night-market_img_02.jpg",
                                         "size": "full",
                                         "aspectRatio": "20:13",
                                         "aspectMode": "cover"
@@ -337,6 +337,28 @@ def handle_message(event):
                                 "color": "#999999",
                                 "margin": "md"
                             }
+                            ,
+{
+    "type": "button",
+    "style": "primary",
+    "color": "#1DB446",
+    "margin": "lg",
+    "action": {
+        "type": "uri",
+        "label": "立即報名",
+        "uri": "https://ted-1111.github.io/taoyuan-trip/"
+    }
+},
+{
+    "type": "button",
+    "style": "secondary",
+    "margin": "md",
+    "action": {
+        "type": "uri",
+        "label": "真人客服",
+        "uri": "https://line.me/R/ti/p/@0928251217"
+    }
+}
                         ]
                     }
                 }
