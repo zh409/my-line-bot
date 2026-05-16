@@ -368,8 +368,30 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(
-                text="請輸入「桃園銀髮一日遊」查看完整旅遊行程。"
+    text="歡迎來到銀髮慢活旅行社！請選擇服務👇",
+    quick_reply=QuickReply(
+        items=[
+            QuickReplyButton(
+                action=MessageAction(
+                    label="桃園銀髮一日遊",
+                    text="桃園銀髮一日遊"
+                )
+            ),
+            QuickReplyButton(
+                action=MessageAction(
+                    label="價格方案",
+                    text="價格方案"
+                )
+            ),
+            QuickReplyButton(
+                action=URIAction(
+                    label="真人客服",
+                    uri="https://line.me/R/ti/p/@你的LINEID"
+                )
             )
+        ]
+    )
+)
         )
 
 # Render 用
